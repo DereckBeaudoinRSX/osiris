@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="Peak Automation">
+  <title>Peak Automation</title>
+  <!-- Secondary ridge -->
+  <path d="M33.4 14.9 46.6 37.2a1.05 1.05 0 0 1-.9 1.58H32.2l-5.3-8.94Z" fill="#4A9EE0" opacity="0.55"/>
+  <!-- Primary summit -->
+  <path d="M23.06 6.24a1.05 1.05 0 0 1 1.81 0l12.5 21.1-4.55 7.67L24 20.3l-8.82 14.7-4.55-7.67Z" fill="#A7EAED"/>
+  <!-- Valley base -->
+  <path d="M10.63 27.33 4.3 38.78a1.05 1.05 0 0 0 .92 1.56h11.6L24 27.9l7.18 12.44h11.6" fill="none" stroke="#A7EAED" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.75"/>
+  <!-- Summit node -->
+  <circle cx="24" cy="9.6" r="2.6" fill="#FFFFFF"/>
+</svg>

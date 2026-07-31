@@ -1,13 +1,18 @@
 {
-  "name": "OSIRIS — Global Intelligence Platform",
+  "name": "OSIRIS — Global Intelligence Platform by Peak Automation",
   "short_name": "OSIRIS",
   "description": "Real-time global OSINT intelligence dashboard. Track 10K+ aircraft, 2K satellites, worldwide CCTV, earthquakes, wildfires, nuclear facilities, and more.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#06060C",
-  "theme_color": "#D4AF37",
+  "background_color": "#060D18",
+  "theme_color": "#A7EAED",
   "orientation": "landscape-primary",
-  "categories": ["security", "intelligence", "analytics", "news"],
+  "categories": [
+    "security",
+    "intelligence",
+    "analytics",
+    "news"
+  ],
   "icons": [
     {
       "src": "/favicon.svg",

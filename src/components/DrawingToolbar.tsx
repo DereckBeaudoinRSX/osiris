@@ -58,7 +58,7 @@ export function calculatePerimeter(coords: number[][]): number {
 }
 
 const POLYGON_COLORS = [
-  '#00E5FF', '#FF3D57', '#FFD700', '#00E676', '#E040FB',
+  '#4A9EE0', '#FF3D57', '#FFD700', '#00E676', '#E040FB',
   '#FF6D00', '#40C4FF', '#69F0AE', '#FFAB40', '#7C4DFF',
 ];
 
@@ -162,7 +162,7 @@ export default function DrawingToolbar({
             onClick={onToggleDrawing}
             className={`w-full flex items-center justify-center gap-2 px-3 py-2.5 rounded text-[9px] font-mono tracking-[0.2em] transition-all relative overflow-hidden ${
               isDrawing
-                ? 'bg-[var(--cyan-primary)]/10 border border-[var(--cyan-primary)]/50 text-[var(--cyan-primary)] shadow-[0_0_15px_rgba(0,229,255,0.2)]'
+                ? 'bg-[var(--cyan-primary)]/10 border border-[var(--cyan-primary)]/50 text-[var(--cyan-primary)] shadow-[0_0_15px_rgba(74, 158, 224,0.2)]'
                 : 'bg-white/5 border border-white/10 text-white/70 hover:bg-white/10 hover:text-white'
             }`}
           >

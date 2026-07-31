@@ -120,7 +120,7 @@ export function classifyDevice(
     return { device_type: 'VoIP/SIP', device_icon: 'Phone', device_color: '#87CEEB' };
   }
   if (cpeLower.some((c) => /mikrotik|ubiquiti|cisco|juniper|fortinet/.test(c)) || portSet.has(161) || portSet.has(8291)) {
-    return { device_type: 'Router/Switch', device_icon: 'Router', device_color: '#00E5FF' };
+    return { device_type: 'Router/Switch', device_icon: 'Router', device_color: '#4A9EE0' };
   }
   if (portSet.has(3306) || portSet.has(5432) || portSet.has(27017) || portSet.has(6379) || portSet.has(9200) || portSet.has(5984)) {
     return { device_type: 'Database', device_icon: 'Database', device_color: '#FF6B00' };
@@ -135,7 +135,7 @@ export function classifyDevice(
     return { device_type: 'FTP Server', device_icon: 'HardDrive', device_color: '#FFD700' };
   }
   if (portSet.has(1194) || portSet.has(1723) || portSet.has(500) || portSet.has(4500) || cpeLower.some((c) => /openvpn|wireguard/.test(c))) {
-    return { device_type: 'VPN Gateway', device_icon: 'ShieldCheck', device_color: '#D4AF37' };
+    return { device_type: 'VPN Gateway', device_icon: 'ShieldCheck', device_color: '#A7EAED' };
   }
   if (portSet.has(3389)) {
     return { device_type: 'Windows Workstation', device_icon: 'Monitor', device_color: '#E040FB' };

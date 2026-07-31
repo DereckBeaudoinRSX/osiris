@@ -32,7 +32,7 @@ interface GraphData { nodes: EntityNode[]; links: EntityLink[]; }
 // ── PALETTE ──
 
 const TYPE_COLORS: Record<string, string> = {
-  aircraft: '#00E5FF', vessel: '#00BCD4', company: '#D4AF37',
+  aircraft: '#4A9EE0', vessel: '#00BCD4', company: '#A7EAED',
   person: '#B388FF', country: '#76FF03', event: '#FF9500', sanction: '#FF1744',
   ip: '#FF6D00',
 };
@@ -176,14 +176,14 @@ function EntityGraphPanel({ entity, onClose }: Props) {
     if (!s.x || !t.x) return;
     ctx.beginPath(); ctx.moveTo(s.x, s.y); ctx.lineTo(t.x, t.y);
     // Smooth, thin, non-dashed lines
-    ctx.strokeStyle = 'rgba(212,175,55,0.15)'; // faint gold
+    ctx.strokeStyle = 'rgba(167, 234, 237,0.15)'; // faint gold
     ctx.lineWidth = Math.max(0.5, 1 / globalScale); 
     ctx.stroke();
     
     const fs = Math.max(8 / globalScale, 2);
     if (fs > 3) {
       ctx.font = `${fs}px 'JetBrains Mono', monospace`; 
-      ctx.fillStyle = 'rgba(212,175,55,0.4)';
+      ctx.fillStyle = 'rgba(167, 234, 237,0.4)';
       ctx.textAlign = 'center'; ctx.fillText(link.label || '', (s.x + t.x) / 2, (s.y + t.y) / 2);
     }
   }, []);
@@ -208,12 +208,12 @@ function EntityGraphPanel({ entity, onClose }: Props) {
         <style>{`
           .scanline {
             position: absolute; inset: 0; pointer-events: none;
-            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(212,175,55,0.03) 50%, rgba(212,175,55,0.03));
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(167, 234, 237,0.03) 50%, rgba(167, 234, 237,0.03));
             background-size: 100% 4px;
             z-index: 10;
           }
           .hud-corner {
-            position: absolute; width: 16px; height: 16px; border-color: rgba(212,175,55,0.4); border-style: solid; z-index: 20; pointer-events: none;
+            position: absolute; width: 16px; height: 16px; border-color: rgba(167, 234, 237,0.4); border-style: solid; z-index: 20; pointer-events: none;
           }
           .hud-tl { top: 12px; left: 12px; border-width: 2px 0 0 2px; }
           .hud-tr { top: 12px; right: 12px; border-width: 2px 2px 0 0; }
@@ -284,7 +284,7 @@ function EntityGraphPanel({ entity, onClose }: Props) {
               d3AlphaDecay={0.05} d3VelocityDecay={0.4} cooldownTicks={100}
               linkDirectionalParticles={1} linkDirectionalParticleWidth={1.5}
               linkDirectionalParticleSpeed={0.003}
-              linkDirectionalParticleColor={() => 'rgba(212,175,55,0.6)'}
+              linkDirectionalParticleColor={() => 'rgba(167, 234, 237,0.6)'}
             />
           )}
           {graphData.nodes.length === 0 && !loading && (

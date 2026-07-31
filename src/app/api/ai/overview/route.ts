@@ -84,13 +84,6 @@ function digestMarkets(payload: any): Digest {
     facts.push('No live market instruments available in the current feed.');
   }
 
-  const btc = markets?.crypto?.BTC || markets?.crypto?.bitcoin;
-  const btcPct = num(btc?.change_percent);
-  if (btcPct !== null) {
-    facts.push(`Bitcoin ${btcPct >= 0 ? 'up' : 'down'} ${btcPct.toFixed(2)}% at $${num(btc?.price)?.toLocaleString() ?? '—'}.`);
-    highlights.push(`₿ BTC ${btcPct >= 0 ? '+' : ''}${btcPct.toFixed(2)}%`);
-  }
-
   if (space?.kp_index != null) {
     const kp = num(space.kp_index);
     const geomag = kp !== null && kp >= 5 ? 'geomagnetic storm conditions' : 'quiet geomagnetic field';

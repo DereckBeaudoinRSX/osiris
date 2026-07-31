@@ -14,7 +14,7 @@ app, and configuring the optional API keys.
 ## 1. Docker Compose (recommended)
 
 ```bash
-git clone https://github.com/simplifaisoul/osiris.git
+git clone https://github.com/DereckBeaudoinRSX/osiris.git
 cd osiris
 
 # optional: configure keys / scanner backend
@@ -29,7 +29,7 @@ What the compose file does:
 
 - **`build:`** — compose builds the image locally from the `Dockerfile`, so
   you always run the code you just cloned. To run the prebuilt registry image
-  instead, add `image: ghcr.io/simplifaisoul/osiris:latest` to the `osiris`
+  instead, add `image: ghcr.io/dereckbeaudoinrsx/osiris:latest` to the `osiris`
   service and drop the `build:` block.
 - **`env_file: .env` (`required: false`)** — if a `.env` file exists its
   values are injected into the container; if it's missing, OSIRIS still starts
@@ -55,10 +55,10 @@ Container Registry on every push to `master` and every `v*.*.*` tag, so you can
 run OSIRIS without building anything:
 
 ```bash
-docker pull ghcr.io/simplifaisoul/osiris:latest   # or a pinned tag, e.g. :0.1.0
+docker pull ghcr.io/dereckbeaudoinrsx/osiris:latest   # or a pinned tag, e.g. :0.1.0
 docker run -d --name osiris \
   -p 3005:3000 --env-file .env --restart unless-stopped \
-  ghcr.io/simplifaisoul/osiris:latest
+  ghcr.io/dereckbeaudoinrsx/osiris:latest
 ```
 
 The package is public — no `docker login` is required to pull it.
@@ -95,7 +95,7 @@ reads.
 3. OSIRIS appears on the dashboard with its icon, reachable on host port
    `3000` (or whatever `OSIRIS_PORT` you set in `.env`).
 
-The app icon is the gold Eye-of-Horus mark in
+The app icon is the Peak Automation summit mark in
 `public/casaos-icon.png` (512×512 PNG), referenced by the `icon:` URL in the
 metadata.
 
@@ -103,7 +103,7 @@ metadata.
 > relative `build:` context may not resolve there. If importing the YAML
 > directly, either build/tag `osiris:latest` first
 > (`docker build -t osiris:latest /path/to/osiris`) or replace the `build:`
-> block with `image: ghcr.io/simplifaisoul/osiris:latest`.
+> block with `image: ghcr.io/dereckbeaudoinrsx/osiris:latest`.
 
 ---
 
@@ -149,7 +149,5 @@ them only if you extend the relevant route or hit rate limits.
 Aviation → `adsb.lol` · Satellites → `celestrak.org` (TLE) · Fires →
 NASA FIRMS open-data CSV · Earthquakes → USGS · Weather → NASA EONET · Space
 weather → NOAA SWPC · CVEs → NVD · News → public RSS / HLS streams · CCTV →
-public traffic-authority feeds · Crypto (BTC) → `blockstream.info` · Crypto
-(ETH) → `eth.blockscout.com` ([Blockscout](https://github.com/blockscout/blockscout)
-open-source explorer) · OFAC SDN sanctions → [OpenSanctions](https://www.opensanctions.org)
+public traffic-authority feeds · OFAC SDN sanctions → [OpenSanctions](https://www.opensanctions.org)
 mirror (CC-BY 4.0) · Telegram OSINT → public `t.me/s/<channel>` web preview.

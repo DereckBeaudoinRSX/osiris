@@ -1,4 +1,5 @@
-# Osiris Global Intelligence Platform
+# OSIRIS — Global Intelligence Platform
+# by Peak Automation — https://peakautomation.ca
 # https://osirisai.live
 
 User-agent: *

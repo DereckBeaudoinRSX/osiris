@@ -14,7 +14,7 @@ export const maxDuration = 60;
 const MISSION_CLASSIFY: Record<string, { mission: string; color: string }> = {
   'USA': { mission: 'Military Recon', color: '#FF3D3D' },
   'NROL': { mission: 'NRO Classified', color: '#FF3D3D' },
-  'LACROSSE': { mission: 'SAR Imaging', color: '#00E5FF' },
+  'LACROSSE': { mission: 'SAR Imaging', color: '#4A9EE0' },
   'MENTOR': { mission: 'SIGINT', color: '#FFFFFF' },
   'ORION': { mission: 'SIGINT', color: '#FFFFFF' },
   'TRUMPET': { mission: 'SIGINT', color: '#FFFFFF' },
@@ -50,7 +50,7 @@ function classifySatellite(name: string): { mission: string; color: string } {
   for (const [keyword, info] of Object.entries(MISSION_CLASSIFY)) {
     if (upper.includes(keyword)) return info;
   }
-  return { mission: 'Unknown', color: '#00E5FF' };
+  return { mission: 'Unknown', color: '#4A9EE0' };
 }
 
 function gmst(jd: number): number {

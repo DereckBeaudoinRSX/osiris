@@ -131,7 +131,7 @@ export default function DocsClient() {
         className="pointer-events-none fixed inset-0 z-0"
         style={{
           background:
-            'radial-gradient(900px 480px at 12% -8%, rgba(212,175,55,0.07), transparent 65%), radial-gradient(760px 420px at 92% 4%, rgba(0,229,255,0.05), transparent 62%)',
+            'radial-gradient(900px 480px at 12% -8%, rgba(167, 234, 237,0.07), transparent 65%), radial-gradient(760px 420px at 92% 4%, rgba(74, 158, 224,0.05), transparent 62%)',
         }}
       />
 
@@ -142,16 +142,17 @@ export default function DocsClient() {
         <div className="max-w-[1600px] mx-auto px-4 md:px-8 h-14 flex items-center gap-3">
           <Link href="/" className="flex items-center gap-2.5 shrink-0 group">
             <svg
-              viewBox="0 0 650 500"
-              className="w-6 h-6 text-[var(--gold-primary)] transition-all group-hover:drop-shadow-[0_0_10px_rgba(212,175,55,0.6)]"
-              fill="currentColor"
+              viewBox="0 0 48 48"
+              className="w-6 h-6 transition-all group-hover:drop-shadow-[0_0_10px_rgba(167,234,237,0.6)]"
               aria-hidden="true"
             >
-              <path d="M158.66,157a70.231,70.231,0,0,0-14.44,42.81,70.235,70.235,0,1,0,140.47,0,70.231,70.231,0,0,0-14.28-42.81h-111.75z" />
-              <path d="m140.86,465.53c-6.7333,0-8.7137-5.4462-12.181-25.899-2.4479-14.774-7.1068-28.463-10.502-43.043-3.0219-13.117-5.6425-20.332-9.6694-26.618-6.5526-10.229-6.3011-20.921,0.71691-30.481,6.33-8.6232,6.827-11.121,6.5471-32.901-0.13783-10.725-0.56403-21.286-0.94711-23.468-0.88077-5.0179-4.6148-7.6923-13.904-9.9586-8.4827-2.0695-16.525-2.2933-41.967-1.1681-18.144,0.80245-20.457,0.72323-22.75-0.77901-5.627-3.687-2.9527-8.8405,12.261-23.626,15.69-15.249,23.876-24.688,38.811-44.75,26.839-36.053,30.927-40.83,57.501-49.189,19.575-6.1582,26.691-9.0119,62.031-10.06,24.654-0.7309,38.767,2.5963,45.357,3.3466,25.219,2.8716,66.247,14.877,91.933,26.083,13.581,5.9249,14.042,6.1723,30.115,16.152,11.981,7.4391,18.733,10.459,35.44,15.034,34.886,9.553,56.753,7.7583,92,10.378,9.2579,0.68808,49.298,3.5149,74.5,4.4784,30.689,1.1732,35.835-2.0376,38.423,0.54994,2.0315,2.0315,0.5636,8.1815,0.6024,14.306,0.0237,3.7378-0.18399,7.6642-0.48569,11.602-8.1923-1.424-8.0353-1.3676-26.54-2.9165-1.6808-0.14069-16.718-1.6695-44.5-4.1726-11.867-1.0692-70.326-2.8448-105.5-3.9248-16.997-0.52189-34.357-4.7228-51-1.2347-5.7624,1.2076,2.387-1.1161-16,7.4812-36.313,14.051-55.853,23.79-104.5,32.83-30.774,4.5201-33.208,4.9745-36.376,7.2909-1.7456,1.2764-1.662,1.6171,1.6767,6.8363,3.5642,5.5717,14.275,15.81,29.699,28.389,51.619,43.564,115.05,77.431,162.89,98.598,22.221,9.5122,37.55,14.655,50.108,16.811,61.892,13.654,134.26-9.4938,136.11-56.959,0.0489-1.256,0.49928-6.001-0.1398-12.079-0.44539-4.2357-0.89625-7.3216-2.2932-11.095-3.9795-10.75-12.413-20.407-28.672-21.755-11.746,0.022-20.375,6.1561-23.95,16.17-4.5622,12.78,1.3185,27.071,14.023,29.565,6.6403,1.3038,11.222-0.5256,14.271-4.4679,3.3424-4.3221,3.72-12.026,1.3559-15.634-2.2757-3.4732-7.2459-5.2754-10.824-3.9248-3.6125,1.3636-4.9933,0.36555-0.6538-3.1839,0.38036-0.24867,0.77844-0.4586,1.191-0.63136,6.6675-2.7918,17.127,4.1226,17.913,14.135,0.7119,11.495-7.7045,20.279-19.249,20.94-6.5659,0.37574-14.594-1.9665-20.026-7.8035-13.425-14.428-9.1712-34.885,2.9586-45.762,4.6131-4.1366,7.7535-6.0583,14.065-7.4773,19.37-4.3554,37.69,4.5134,45.528,24.301,3.5645,8.9992,3.7675,16.201,3.8515,23.221,0.70438,58.895-65.742,87.202-131.95,82.517-28.009-2.4123-46.229-6.8095-80.495-20.915-36.58-12.09-143.44-68.32-207.96-120.33-18.846-15.317-30.511-22.813-33.055-21.24-0.61585,0.38062-0.98989,11.992-0.99221,30.802-0.004,28.758-0.1019,30.352-2.0717,33.583-3.2793,5.3791-4.935,17.725-5.9822,44.608-1.6327,41.914-2.675,60.915-3.4439,62.778-1.3963,3.383-7.0306,4.6642-13.289,4.6642z" />
+              <path d="M33.4 14.9 46.6 37.2a1.05 1.05 0 0 1-.9 1.58H32.2l-5.3-8.94Z" fill="var(--cyan-primary)" opacity="0.55" />
+              <path d="M23.06 6.24a1.05 1.05 0 0 1 1.81 0l12.5 21.1-4.55 7.67L24 20.3l-8.82 14.7-4.55-7.67Z" fill="var(--gold-primary)" />
+              <path d="M10.63 27.33 4.3 38.78a1.05 1.05 0 0 0 .92 1.56h11.6L24 27.9l7.18 12.44h11.6" fill="none" stroke="var(--gold-primary)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" opacity="0.75" />
+              <circle cx="24" cy="9.6" r="2.6" fill="var(--text-heading)" />
             </svg>
             <span className="flex flex-col leading-none">
-              <span className="text-[13px] font-bold tracking-[0.3em] text-[var(--gold-primary)] font-mono">
+              <span className="text-[13px] font-bold tracking-[0.3em] text-[var(--gold-primary)]" style={{ fontFamily: 'var(--font-display)' }}>
                 OSIRIS
               </span>
               <span className="text-[7px] font-mono tracking-[0.22em] text-[var(--text-muted)] uppercase mt-[3px]">
@@ -179,7 +180,7 @@ export default function DocsClient() {
           </button>
 
           <a
-            href="https://github.com/simplifaisoul/osiris"
+            href="https://github.com/DereckBeaudoinRSX/osiris"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub repository"
@@ -267,7 +268,7 @@ export default function DocsClient() {
             <h1 className="text-[38px] md:text-[52px] leading-[1.05] font-bold tracking-[-0.02em] mb-5">
               <span className="text-[var(--text-heading)]">Build on the</span>
               <br />
-              <span className="bg-gradient-to-r from-[var(--gold-primary)] via-[#F0D060] to-[var(--cyan-primary)] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[var(--gold-primary)] via-[#D6F6F8] to-[var(--cyan-primary)] bg-clip-text text-transparent">
                 OSIRIS platform
               </span>
             </h1>
@@ -374,7 +375,7 @@ print(len(data["commercial_flights"]), "commercial")`,
 
           <Section id="self-hosting" eyebrow="Guide" title="Self-Hosting">
             <p>OSIRIS needs Node 20+ and no database. A local instance is three commands:</p>
-            <Pre label="Local development" lang="bash">{`git clone https://github.com/simplifaisoul/osiris.git
+            <Pre label="Local development" lang="bash">{`git clone https://github.com/DereckBeaudoinRSX/osiris.git
 cd osiris
 npm install
 npm run dev        # http://localhost:3000`}</Pre>
@@ -596,10 +597,10 @@ docker compose up -d`}</Pre>
           {/* Footer */}
           <footer className="border-t border-white/[0.06] pt-6 pb-16 flex flex-wrap items-center gap-x-5 gap-y-2 text-[11px] font-mono text-[var(--text-muted)]">
             {[
-              { href: 'https://github.com/simplifaisoul/osiris', label: 'GitHub' },
-              { href: 'https://discord.gg/EPaFD5FFKf', label: 'Discord' },
-              { href: 'https://x.com/soulsimplifai', label: 'X' },
-              { href: 'https://github.com/simplifaisoul/osiris/issues', label: 'Report an issue' },
+              { href: 'https://github.com/DereckBeaudoinRSX/osiris', label: 'GitHub' },
+              { href: 'https://peakautomation.ca', label: 'Peak Automation' },
+              { href: 'mailto:info@peakautomation.ca', label: 'Contact' },
+              { href: 'https://github.com/DereckBeaudoinRSX/osiris/issues', label: 'Report an issue' },
             ].map(l => (
               <a
                 key={l.label}

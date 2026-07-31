@@ -61,7 +61,7 @@ const FREE_SOURCES = [
     name: 'Sentinel Hub EO Browser',
     url: 'https://apps.sentinel-hub.com/eo-browser/',
     desc: 'Multi-spectral Sentinel-2 imagery with band composites',
-    color: '#00E5FF',
+    color: '#4A9EE0',
   },
   {
     name: 'NASA Worldview',
@@ -162,7 +162,7 @@ export default function SatellitePanel({
   const getCloudColor = (cover: number | null) => {
     if (cover === null) return 'var(--text-muted)';
     if (cover <= 10) return '#00E676';
-    if (cover <= 30) return '#D4AF37';
+    if (cover <= 30) return '#A7EAED';
     if (cover <= 60) return '#FF9500';
     return '#FF3D57';
   };
@@ -336,7 +336,7 @@ export default function SatellitePanel({
             {[1, 2, 3].map((i) => (
               <div
                 key={i}
-                className="h-16 rounded-lg bg-[#00E5FF]/5 border border-[#00E5FF]/20 animate-pulse shadow-[0_0_10px_rgba(0,229,255,0.1)]"
+                className="h-16 rounded-lg bg-[#4A9EE0]/5 border border-[#4A9EE0]/20 animate-pulse shadow-[0_0_10px_rgba(74, 158, 224,0.1)]"
                 style={{ animationDelay: `${i * 150}ms` }}
               />
             ))}
@@ -532,9 +532,9 @@ export default function SatellitePanel({
               <div
                 className="flex flex-col gap-3 p-3.5 rounded-xl mt-1"
                 style={{
-                  background: 'linear-gradient(180deg, rgba(212,175,55,0.08) 0%, rgba(212,175,55,0.02) 100%)',
-                  border: '1px solid rgba(212,175,55,0.2)',
-                  boxShadow: 'inset 0 1px 0 rgba(212,175,55,0.1)',
+                  background: 'linear-gradient(180deg, rgba(167, 234, 237,0.08) 0%, rgba(167, 234, 237,0.02) 100%)',
+                  border: '1px solid rgba(167, 234, 237,0.2)',
+                  boxShadow: 'inset 0 1px 0 rgba(167, 234, 237,0.1)',
                 }}
               >
                 <p className="text-[10px] font-mono text-white/80 leading-relaxed">
@@ -553,10 +553,10 @@ export default function SatellitePanel({
                   href="https://app.skyfi.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-[11px] font-mono font-bold tracking-[0.15em] transition-all hover:shadow-[0_0_20px_rgba(212,175,55,0.2)] mt-1"
+                  className="flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-[11px] font-mono font-bold tracking-[0.15em] transition-all hover:shadow-[0_0_20px_rgba(167, 234, 237,0.2)] mt-1"
                   style={{
-                    background: 'rgba(212,175,55,0.15)',
-                    border: '1px solid rgba(212,175,55,0.4)',
+                    background: 'rgba(167, 234, 237,0.15)',
+                    border: '1px solid rgba(167, 234, 237,0.4)',
                     color: 'var(--gold-primary)',
                   }}
                 >

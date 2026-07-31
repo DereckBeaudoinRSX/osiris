@@ -244,12 +244,6 @@ export const API_GROUPS: ApiGroup[] = [
         returns: ['stocks', 'timestamp'],
       },
       {
-        path: '/api/crypto',
-        method: 'GET',
-        summary: 'Spot prices for the assets shown in the status ticker.',
-        returns: ['…price series'],
-      },
-      {
         path: '/api/scm-suppliers',
         method: 'GET',
         summary: 'Supply-chain suppliers with criticality flags.',

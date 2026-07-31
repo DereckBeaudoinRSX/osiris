@@ -1,7 +1,7 @@
 # Security Policy
 
 ## Responsible Usage
-The OSIRIS Project provides powerful Open Source Intelligence (OSINT) and cybersecurity monitoring tools designed to visualize and analyze global threat landscapes. 
+OSIRIS, maintained by [Peak Automation](https://peakautomation.ca), provides powerful Open Source Intelligence (OSINT) and cybersecurity monitoring tools designed to visualize and analyze global threat landscapes. 
 
 **By using this software, you agree to the following:**
 1. **Defensive Use Only:** The tools, scripts, and intelligence capabilities provided in this repository must be used strictly for defensive, educational, and authorized monitoring purposes.
@@ -16,7 +16,7 @@ The creators and contributors of OSIRIS are not responsible for any misuse or da
 We take the security of our project seriously. If you discover a security vulnerability within the OSIRIS codebase itself, please do not disclose it publicly.
 
 **To report a vulnerability:**
-1. Please open an issue in the GitHub repository and label it appropriately, or contact the repository maintainers directly if a private channel is available.
+1. Email [info@peakautomation.ca](mailto:info@peakautomation.ca) with the subject line `OSIRIS SECURITY`, or open a GitHub security advisory on the repository. Please do not file a public issue.
 2. Provide a detailed description of the vulnerability, including steps to reproduce it and the potential impact.
 3. Our team will acknowledge the receipt of your report and provide an estimated timeline for resolution.
 

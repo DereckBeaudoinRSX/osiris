@@ -26,7 +26,7 @@ import { LatticeAdapter } from './LatticeAdapter';
 function translateFlights(flights: any[], subtype: string): PolybolosEntity[] {
   if (!flights?.length) return [];
   const colorMap: Record<string, string> = {
-    commercial: '#00E5FF', private: '#00E676', jets: '#FF69B4', military: '#FF3D3D',
+    commercial: '#4A9EE0', private: '#00E676', jets: '#FF69B4', military: '#FF3D3D',
   };
   const threatMap: Record<string, ThreatLevel> = {
     commercial: ThreatLevel.NONE, private: ThreatLevel.NONE,
@@ -43,7 +43,7 @@ function translateFlights(flights: any[], subtype: string): PolybolosEntity[] {
     source: { provider: 'osiris', feed: `flights-${subtype}`, originalId: f.icao24, confidence: 0.9 },
     timestamp: new Date().toISOString(),
     properties: { model: f.model, registration: f.registration, icao24: f.icao24, subtype },
-    display: { color: colorMap[subtype] || '#00E5FF', icon: `plane-${subtype === 'military' ? 'red' : 'cyan'}`, layerType: 'symbol' as const },
+    display: { color: colorMap[subtype] || '#4A9EE0', icon: `plane-${subtype === 'military' ? 'red' : 'cyan'}`, layerType: 'symbol' as const },
   }));
 }
 
@@ -97,7 +97,7 @@ function translateSatellites(sats: any[]): PolybolosEntity[] {
     source: { provider: 'osiris', feed: 'satnogs', originalId: s.noradId?.toString(), confidence: 0.95 },
     timestamp: new Date().toISOString(),
     properties: { mission: s.mission, noradId: s.noradId, color: s.color },
-    display: { color: s.color || '#D4AF37', icon: 'dot-gold', layerType: 'circle' as const },
+    display: { color: s.color || '#A7EAED', icon: 'dot-gold', layerType: 'circle' as const },
   }));
 }
 

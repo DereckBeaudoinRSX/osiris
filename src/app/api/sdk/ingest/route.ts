@@ -100,7 +100,7 @@ export async function POST(request: NextRequest) {
         timestamp: entity.timestamp || new Date().toISOString(),
         properties: entity.properties || {},
         display: entity.display || {
-          color: '#D4AF37',
+          color: '#A7EAED',
           icon: 'dot-gold',
           layerType: 'circle',
           glow: false,

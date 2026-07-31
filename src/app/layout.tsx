@@ -4,11 +4,13 @@ import "./globals.css";
 
 const SITE_URL = "https://osirisai.live";
 const SITE_NAME = "OSIRIS";
-const SITE_TITLE = "OSIRIS — Open Source Intelligence Platform | Live Flight Tracking, CCTV, OSINT Tools & More";
+const BRAND = "Peak Automation";
+const BRAND_URL = "https://peakautomation.ca";
+const SITE_TITLE = "OSIRIS by Peak Automation — Open Source Intelligence Platform | Live Flight Tracking, CCTV, OSINT Tools & More";
 const SITE_DESCRIPTION = "The open-source Palantir alternative. Track 10,000+ aircraft, 2,000 satellites, and worldwide CCTV cameras in real-time on a 3D globe. Run Nmap scans, DNS lookups, WHOIS queries, SSL cert analysis & threat intelligence — all from your browser. 20+ live data feeds including earthquakes, wildfires, nuclear facilities, cyber threats, and global conflicts. Free & open source.";
 
 export const viewport: Viewport = {
-  themeColor: "#D4AF37",
+  themeColor: "#A7EAED",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -19,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: SITE_TITLE,
-    template: "%s | OSIRIS Intelligence",
+    template: "%s | OSIRIS by Peak Automation",
   },
   description: SITE_DESCRIPTION,
   keywords: [
@@ -53,10 +55,11 @@ export const metadata: Metadata = {
     
     // Brand
     "osiris", "osirisai", "osirisai.live",
+    "peak automation", "peakautomation", "peakautomation.ca",
   ],
-  authors: [{ name: "Osiris Project", url: SITE_URL }],
-  creator: "Osiris Project",
-  publisher: "Osiris Project",
+  authors: [{ name: BRAND, url: BRAND_URL }],
+  creator: BRAND,
+  publisher: BRAND,
   robots: {
     index: true,
     follow: true,
@@ -91,10 +94,10 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
   },
   openGraph: {
-    title: "OSIRIS — The Open-Source Palantir Alternative | Live Flights, CCTV, Satellites & OSINT Tools",
+    title: "OSIRIS by Peak Automation — The Open-Source Palantir Alternative | Live Flights, CCTV, Satellites & OSINT Tools",
     description: "Track 10K+ aircraft, 2K satellites & worldwide CCTV on a 3D globe. Run Nmap, DNS, WHOIS & threat intel scans from your browser. 20+ live intelligence feeds. Free. Open source.",
     type: "website",
-    siteName: SITE_NAME,
+    siteName: `${SITE_NAME} by ${BRAND}`,
     locale: "en_US",
     url: SITE_URL,
     images: [
@@ -102,17 +105,17 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "OSIRIS — Open Source Intelligence Platform with Live Tracking & OSINT Tools",
+        alt: "OSIRIS by Peak Automation — Open Source Intelligence Platform with Live Tracking & OSINT Tools",
         type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "🛰️ OSIRIS — Open Source Palantir Alternative | Live Tracking + OSINT Tools",
+    title: "🛰️ OSIRIS by Peak Automation — Open Source Palantir Alternative | Live Tracking + OSINT Tools",
     description: "Track 10K+ flights, satellites & CCTV worldwide. Run Nmap, DNS, WHOIS scans from your browser. 20+ live intel feeds. Free & open source.",
-    creator: "@simplifaisoul",
-    site: "@simplifaisoul",
+    creator: "@peakautomation",
+    site: "@peakautomation",
     images: [`${SITE_URL}/og-image.png`],
   },
   category: "technology",
@@ -122,7 +125,7 @@ export const metadata: Metadata = {
     "apple-mobile-web-app-status-bar-style": "black-translucent",
     "apple-mobile-web-app-title": "OSIRIS",
     "mobile-web-app-capable": "yes",
-    "msapplication-TileColor": "#06060C",
+    "msapplication-TileColor": "#060D18",
     "msapplication-config": "none",
   },
 };
@@ -131,8 +134,8 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  name: "OSIRIS — OSINT Toolkit & Intelligence Platform",
-  alternateName: ["OSIRIS", "OsirisAI", "Osiris OSINT"],
+  name: "OSIRIS — OSINT Toolkit & Intelligence Platform by Peak Automation",
+  alternateName: ["OSIRIS", "OsirisAI", "Osiris OSINT", "OSIRIS by Peak Automation"],
   url: SITE_URL,
   description: SITE_DESCRIPTION,
   applicationCategory: "SecurityApplication",
@@ -169,8 +172,14 @@ const jsonLd = {
   screenshot: `${SITE_URL}/og-image.png`,
   author: {
     "@type": "Organization",
-    name: "Osiris Project",
-    url: SITE_URL,
+    name: BRAND,
+    url: BRAND_URL,
+    email: "info@peakautomation.ca",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: BRAND,
+    url: BRAND_URL,
   },
 };
 

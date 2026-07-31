@@ -5,7 +5,7 @@ import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   TrendingUp, TrendingDown, ChevronDown, ChevronUp, BarChart3,
-  Zap, Shield, Droplets, Gem, Bitcoin, LineChart, Maximize2, Minimize2
+  Zap, Shield, Droplets, Gem, LineChart, Maximize2, Minimize2
 } from 'lucide-react';
 import AiOverview from './AiOverview';
 
@@ -16,7 +16,6 @@ const SECTIONS = [
   { key: 'stocks', label: 'DEFENSE', icon: Shield },
   { key: 'oil', label: 'ENERGY', icon: Droplets },
   { key: 'commodities', label: 'COMMODITIES', icon: Gem },
-  { key: 'crypto', label: 'CRYPTO', icon: Bitcoin },
 ];
 
 function Ticker({ name, data: d }: { name: string; data: any }) {
@@ -89,7 +88,7 @@ export default function MarketsPanel({ data, spaceWeather }: MarketsPanelProps) 
 
             {/* One-click AI overview of the current market picture */}
             <div className="mb-2">
-              <AiOverview mode="markets" payload={{ markets, spaceWeather }} accent="#D4AF37" />
+              <AiOverview mode="markets" payload={{ markets, spaceWeather }} accent="#A7EAED" />
             </div>
 
             {/* Section Tabs — icons instead of emojis */}

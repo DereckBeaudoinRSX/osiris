@@ -1,31 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 /* ═══════════════════════════════════════════════════════════════
    OSIRIS — Global Intelligence Platform Design System
-   Egyptian Mythology × Dark Ops × Glassmorphism
+   by Peak Automation (peakautomation.ca)
+
+   Brand palette, sourced from peakautomation.ca:
+     Summit Navy   #081325   deep base
+     Glacier Aqua  #A7EAED   primary accent
+     Ridge Blue    #3984C6   secondary accent
+     Alpine Mist   #DEE4E7   body text
+     Snow          #FFFFFF   headings
    ═══════════════════════════════════════════════════════════════ */
 
 :root {
-  --gold-rgb: 212, 175, 55;
-  --cyan-rgb: 0, 229, 255;
-  /* ── Core Palette ── */
-  --bg-void: #04040A;
-  --bg-primary: #06060C;
-  --bg-secondary: #0C0E1A;
-  --bg-tertiary: #121628;
-  --bg-panel: rgba(8, 10, 20, 0.88);
-  --bg-panel-solid: #0C0E1A;
+  /* Primary accent (Glacier Aqua) — the app's `--gold-*` slot */
+  --gold-rgb: 167, 234, 237;
+  /* Secondary accent (Ridge Blue) — the app's `--cyan-*` slot */
+  --cyan-rgb: 57, 132, 198;
 
-  /* ── Gold Accent (Eye of Horus) ── */
-  --gold-primary: #D4AF37;
-  --gold-light: #F0D060;
-  --gold-dim: #8B7325;
+  /* ── Core Palette (Summit Navy family) ── */
+  --bg-void: #04080F;
+  --bg-primary: #060D18;
+  --bg-secondary: #081325;
+  --bg-tertiary: #0E1D33;
+  --bg-panel: rgba(8, 19, 37, 0.88);
+  --bg-panel-solid: #081325;
+
+  /* ── Glacier Aqua Accent ── */
+  --gold-primary: #A7EAED;
+  --gold-light: #D6F6F8;
+  --gold-dim: #52D6DC;
   --gold-glow: rgba(var(--gold-rgb), 0.3);
 
-  /* ── Cyan Intel Stream ── */
-  --cyan-primary: #00E5FF;
-  --cyan-dim: #006B7A;
+  /* ── Ridge Blue Intel Stream ── */
+  --cyan-primary: #4A9EE0;
+  --cyan-dim: #2B6395;
   --cyan-glow: rgba(var(--cyan-rgb), 0.15);
 
   /* ── Alert Colors ── */
@@ -44,13 +54,13 @@
   --border-active: rgba(var(--gold-rgb), 0.4);
   --border-cyan: rgba(var(--cyan-rgb), 0.2);
 
-  /* ── Text ── */
-  --text-primary: #E8E6E0;
-  --text-secondary: #9B978E;
-  --text-muted: #5C5A54;
-  --text-heading: #F5F0E0;
-  --text-gold: #D4AF37;
-  --text-cyan: #00E5FF;
+  /* ── Text (Alpine Mist family) ── */
+  --text-primary: #DEE4E7;
+  --text-secondary: #93A3AE;
+  --text-muted: #5A6B7A;
+  --text-heading: #FFFFFF;
+  --text-gold: #A7EAED;
+  --text-cyan: #4A9EE0;
 
   /* ── Scrollbar ── */
   --scrollbar-thumb: rgba(var(--gold-rgb), 0.2);
@@ -60,6 +70,9 @@
   --hover-accent: rgba(var(--gold-rgb), 0.08);
 
   /* ── Fonts ── */
+  /* Barlow Condensed + Inter are the Peak Automation brand faces. JetBrains
+     Mono is retained for HUD readouts only, where tabular figures matter. */
+  --font-display: 'Barlow Condensed', 'Inter', -apple-system, sans-serif;
   --font-hud: 'JetBrains Mono', 'Courier New', monospace;
   --font-body: 'Inter', -apple-system, sans-serif;
 
@@ -79,42 +92,42 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   THEME: GHOST PROTOCOL (DEEP VIOLET / PHANTOM OPS)
+   THEME: GHOST PROTOCOL — Peak Automation violet secondary (#875BF7)
    ═══════════════════════════════════════════════════════════════ */
 body.theme-ghost {
-  --gold-rgb: 179, 136, 255;
-  --cyan-rgb: 124, 77, 255;
-  --bg-void: #05000F;
-  --bg-primary: #08001A;
-  --bg-secondary: #0D0025;
-  --bg-tertiary: #140033;
-  --bg-panel: rgba(8, 0, 26, 0.92);
-  --bg-panel-solid: #0D0025;
+  --gold-rgb: 165, 137, 250;
+  --cyan-rgb: 135, 91, 247;
+  --bg-void: #060518;
+  --bg-primary: #090A24;
+  --bg-secondary: #0E1033;
+  --bg-tertiary: #151845;
+  --bg-panel: rgba(9, 10, 36, 0.92);
+  --bg-panel-solid: #0E1033;
 
-  --gold-primary: #B388FF;
-  --gold-light: #D1C4E9;
-  --gold-dim: #6A1B9A;
-  --gold-glow: rgba(179, 136, 255, 0.3);
+  --gold-primary: #A589FA;
+  --gold-light: #CDBCFD;
+  --gold-dim: #6039C4;
+  --gold-glow: rgba(165, 137, 250, 0.3);
 
-  --cyan-primary: #7C4DFF;
-  --cyan-dim: #4A148C;
-  --cyan-glow: rgba(124, 77, 255, 0.2);
+  --cyan-primary: #875BF7;
+  --cyan-dim: #4B2C9E;
+  --cyan-glow: rgba(135, 91, 247, 0.2);
 
-  --border-primary: rgba(179, 136, 255, 0.2);
-  --border-secondary: rgba(179, 136, 255, 0.08);
-  --border-active: rgba(179, 136, 255, 0.45);
-  --border-cyan: rgba(124, 77, 255, 0.25);
+  --border-primary: rgba(165, 137, 250, 0.2);
+  --border-secondary: rgba(165, 137, 250, 0.08);
+  --border-active: rgba(165, 137, 250, 0.45);
+  --border-cyan: rgba(135, 91, 247, 0.25);
 
-  --text-primary: #E1BEE7;
-  --text-secondary: #9575CD;
-  --text-muted: #4A148C;
-  --text-heading: #B388FF;
-  --text-gold: #B388FF;
-  --text-cyan: #7C4DFF;
+  --text-primary: #DEE4E7;
+  --text-secondary: #9D93BE;
+  --text-muted: #5E5688;
+  --text-heading: #FFFFFF;
+  --text-gold: #A589FA;
+  --text-cyan: #875BF7;
 
-  --scrollbar-thumb: rgba(179, 136, 255, 0.25);
-  --scrollbar-thumb-hover: rgba(179, 136, 255, 0.5);
-  --hover-accent: rgba(179, 136, 255, 0.1);
+  --scrollbar-thumb: rgba(165, 137, 250, 0.25);
+  --scrollbar-thumb-hover: rgba(165, 137, 250, 0.5);
+  --hover-accent: rgba(165, 137, 250, 0.1);
 }
 
 @theme inline {
@@ -160,11 +173,11 @@ html:has(.docs-root) body {
 .docs-code { color: #C9D1D9; }
 .docs-code .tok-key { color: var(--gold-primary); }
 .docs-code .tok-str { color: #A5D6A7; }
-.docs-code .tok-num { color: #F0D060; }
+.docs-code .tok-num { color: #D6F6F8; }
 .docs-code .tok-lit { color: #B388FF; }
 .docs-code .tok-kw  { color: #FF7B9C; }
 .docs-code .tok-fn  { color: var(--cyan-primary); }
-.docs-code .tok-com { color: #5C5A54; font-style: italic; }
+.docs-code .tok-com { color: #5A6B7A; font-style: italic; }
 
 /* ── Scrollbar ── */
 .styled-scrollbar::-webkit-scrollbar { width: 3px; }
@@ -323,7 +336,7 @@ html:has(.docs-root) body {
 /* ── Risk Badges ── */
 .risk-critical { color: #FF3D3D; text-shadow: 0 0 8px rgba(255, 61, 61, 0.5); }
 .risk-high { color: #FF9500; text-shadow: 0 0 8px rgba(255, 149, 0, 0.3); }
-.risk-medium { color: #D4AF37; }
+.risk-medium { color: #FFC53D; }
 .risk-low { color: #00E676; }
 
 /* ── CRT Scanlines ── */
@@ -1415,7 +1428,7 @@ html:has(.docs-root) body {
 }
 .gotham-tag--critical { background: rgba(255,61,61,0.12); color: #FF3D3D; border-color: rgba(255,61,61,0.3); }
 .gotham-tag--high { background: rgba(255,149,0,0.12); color: #FF9500; border-color: rgba(255,149,0,0.3); }
-.gotham-tag--medium { background: rgba(var(--gold-rgb),0.12); color: #D4AF37; border-color: rgba(var(--gold-rgb),0.3); }
+.gotham-tag--medium { background: rgba(255,197,61,0.12); color: #FFC53D; border-color: rgba(255,197,61,0.3); }
 .gotham-tag--low { background: rgba(0,230,118,0.12); color: #00E676; border-color: rgba(0,230,118,0.3); }
 .gotham-tag--info { background: rgba(var(--cyan-rgb),0.08); color: var(--cyan-primary); border-color: rgba(var(--cyan-rgb),0.2); }
 .gotham-tag--classified { background: rgba(var(--gold-rgb),0.08); color: var(--gold-primary); border-color: rgba(var(--gold-rgb),0.25); letter-spacing: 0.2em; }
@@ -2290,12 +2303,12 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 50%;
   background: var(--gold-primary);
   cursor: pointer;
-  box-shadow: 0 0 8px rgba(212,175,55,0.4);
+  box-shadow: 0 0 8px rgba(167, 234, 237,0.4);
   border: 2px solid rgba(0,0,0,0.3);
   transition: box-shadow 0.15s;
 }
 input[type="range"]::-webkit-slider-thumb:hover {
-  box-shadow: 0 0 14px rgba(212,175,55,0.6);
+  box-shadow: 0 0 14px rgba(167, 234, 237,0.6);
 }
 input[type="range"]::-moz-range-thumb {
   width: 14px;
@@ -2303,6 +2316,6 @@ input[type="range"]::-moz-range-thumb {
   border-radius: 50%;
   background: var(--gold-primary);
   cursor: pointer;
-  box-shadow: 0 0 8px rgba(212,175,55,0.4);
+  box-shadow: 0 0 8px rgba(167, 234, 237,0.4);
   border: 2px solid rgba(0,0,0,0.3);
 }
