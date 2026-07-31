@@ -18,7 +18,7 @@ git clone https://github.com/DereckBeaudoinRSX/osiris.git
 cd osiris
 
 # optional: configure keys / scanner backend
-cp .env.template .env        # then edit .env
+cp .env.example .env        # then edit .env
 
 docker compose up -d
 ```
@@ -52,7 +52,13 @@ docker compose down             # stop & remove
 
 A prebuilt image for `linux/amd64` and `linux/arm64` is published to the GitHub
 Container Registry on every push to `master` and every `v*.*.*` tag, so you can
-run OSIRIS without building anything:
+run OSIRIS without building anything.
+
+> **On a fresh fork this image does not exist yet.** GitHub Actions is disabled
+> by default on forks, so the publish workflow has never run. Enable it under
+> *Actions → I understand my workflows, go ahead and enable them* and push once;
+> until that build succeeds `docker pull` fails with `denied`. Building locally
+> with `docker compose up -d` works regardless.
 
 ```bash
 docker pull ghcr.io/dereckbeaudoinrsx/osiris:latest   # or a pinned tag, e.g. :0.1.0
@@ -61,7 +67,9 @@ docker run -d --name osiris \
   ghcr.io/dereckbeaudoinrsx/osiris:latest
 ```
 
-The package is public — no `docker login` is required to pull it.
+Once published, make the package public under *Packages → osiris → Package
+settings → Change visibility* so no `docker login` is required to pull it. New
+GHCR packages are **private by default**.
 
 ### Plain `docker run`
 
@@ -109,7 +117,7 @@ metadata.
 
 ## 3. API keys & data sources
 
-Copy `.env.template` to `.env` and fill in only what you need.
+Copy `.env.example` to `.env` and fill in only what you need.
 
 ### What the code actually reads today
 
@@ -135,7 +143,7 @@ them only if you extend the relevant route or hit rate limits.
 | `AIS_API_KEY` | aisstream.io maritime | Sign up at <https://aisstream.io/>, create a key on the **API Keys** page. Used over `wss://stream.aisstream.io/v0/stream`. |
 
 > Keep `.env` out of version control — it is already in `.gitignore`. Only
-> `.env.template` (no secrets) is committed.
+> `.env.example` (no secrets) is committed.
 
 ### Optional runtime overrides
 

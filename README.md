@@ -141,7 +141,7 @@ Open [http://localhost:3000](http://localhost:3000)
 ```bash
 git clone https://github.com/DereckBeaudoinRSX/osiris.git
 cd osiris
-cp .env.template .env     # optional — configure keys / port
+cp .env.example .env     # optional — configure keys / port
 docker compose up -d
 ```
 
@@ -151,7 +151,12 @@ carries CasaOS app metadata (`x-casaos:`) for one-click install on
 [CasaOS](https://casaos.io). See **[DOCKER.md](DOCKER.md)** for the full Docker,
 CasaOS and API-key guide.
 
-**Prebuilt image (GHCR)** — skip the build and pull it directly:
+**Prebuilt image (GHCR)** — only after your fork has published one. The
+`Publish Docker image` workflow builds it on every push to `master`, but
+**GitHub Actions is disabled by default on forks**: enable it under
+*Actions → I understand my workflows, go ahead and enable them*, then push once.
+Until that run succeeds the tag below does not exist and `docker pull` returns
+`denied`. The `docker compose up -d` route above builds locally and always works.
 
 ```bash
 docker pull ghcr.io/dereckbeaudoinrsx/osiris:latest
@@ -165,7 +170,7 @@ editing the compose file.
 ### Environment Variables
 
 OSIRIS works **partially without any API keys** — all core feeds use public,
-keyless sources. Copy [`.env.template`](.env.template) to `.env` and set only
+keyless sources. Copy [`.env.example`](.env.example) to `.env` and set only
 what you need:
 
 ```env
